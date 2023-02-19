@@ -14,11 +14,16 @@ import {
     Toolbar,
     Typography,
     Button,
+    CircularProgress,
 } from '@mui/material'
+
+interface Props {
+    isLoading?: boolean
+}
 
 const drawerWidth = 240
 
-export default function NavBar() {
+const NavBar = ({ isLoading }: Props) => {
     const [mobileOpen, setMobileOpen] = useState(false)
 
     const handleDrawerToggle = () => {
@@ -28,9 +33,11 @@ export default function NavBar() {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <Typography component="h1" variant="h6" sx={{ my: 2 }}>
-                Dad Jokes
+                Dad Jokes - david-j-davis 
             </Typography>
+            {isLoading && <CircularProgress color="secondary" />}
             <Divider />
+            
             <List>
                 <ListItem disablePadding>
                     <ListItemButton sx={{ textAlign: 'center' }}>
@@ -70,6 +77,7 @@ export default function NavBar() {
                     >
                         Dad Jokes - david-j-davis
                     </Typography>
+                    {isLoading && <CircularProgress color="secondary" />}
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         <Button>
                             <Link to="/">Home</Link>
@@ -102,3 +110,5 @@ export default function NavBar() {
         </Box>
     )
 }
+
+export default NavBar

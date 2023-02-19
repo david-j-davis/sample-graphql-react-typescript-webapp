@@ -1,6 +1,6 @@
-import { graphql } from '../gql'
+import { gql } from 'urql'
 
-const SEARCH_QUERY = graphql(
+const SEARCH_QUERY = 
     `
         query SearchQuery($query: String) {
             joke(query: $query) {
@@ -10,6 +10,6 @@ const SEARCH_QUERY = graphql(
             }
         }
     `
-)
+
 
 export default SEARCH_QUERY

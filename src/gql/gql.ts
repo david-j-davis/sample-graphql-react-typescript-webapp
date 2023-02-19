@@ -9,7 +9,7 @@ const documents = [];
  *
  * @example
  * ```ts
- * const query = gql(`query joke($query: String!) { joke(query: $query) { id } }`);
+ * const query = gql(`query GetUser($id: ID!) { user(id: $id) { name } }`);
  * ```
  *
  * The query argument is unknown!

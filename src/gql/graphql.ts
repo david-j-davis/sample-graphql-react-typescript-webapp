@@ -27,5 +27,6 @@ export type Query = {
 
 
 export type QueryJokeArgs = {
+  id?: InputMaybe<Scalars['ID']>;
   query?: InputMaybe<Scalars['String']>;
 };

@@ -16,6 +16,7 @@ import {
     Button,
     CircularProgress,
 } from '@mui/material'
+import './NavBar.css'
 
 interface Props {
     isLoading?: boolean
@@ -31,13 +32,17 @@ const NavBar = ({ isLoading }: Props) => {
     }
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+        <Box
+            className="navbar-mobile"
+            onClick={handleDrawerToggle}
+            sx={{ textAlign: 'center' }}
+        >
             <Typography component="h1" variant="h6" sx={{ my: 2 }}>
-                Dad Jokes - david-j-davis 
+                Dad Jokes - david-j-davis
             </Typography>
             {isLoading && <CircularProgress color="secondary" />}
             <Divider />
-            
+
             <List>
                 <ListItem disablePadding>
                     <ListItemButton sx={{ textAlign: 'center' }}>
@@ -54,7 +59,7 @@ const NavBar = ({ isLoading }: Props) => {
     )
 
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box className="navbar-desktop" sx={{ display: 'flex' }}>
             <CssBaseline />
             <AppBar component="nav">
                 <Toolbar>

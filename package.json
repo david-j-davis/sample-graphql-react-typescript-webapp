@@ -7,8 +7,7 @@
     "license": "MIT",
     "scripts": {
         "dev": "vite",
-        "build": "tsc && vite build",
-        "preview": "vite preview",
+        "build": "vite build",
         "codegen": "graphql-codegen",
         "format": "yarn prettier --write .",
         "test": "yarn jest ./src/__tests__"

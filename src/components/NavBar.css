@@ -1,0 +1,9 @@
+.navbar-desktop button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-mobile li a {
+    color: #1976d2;
+    text-decoration: none;
+}

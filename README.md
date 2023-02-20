@@ -18,12 +18,13 @@ Using any tools you prefer (Vue, React, Angular, plain ol JavaScript, CSS framew
 ## David's Soltion
 
 Checkout branch: `git checkout develop-davis`
+Install: `yarn`
 Run locally: `yarn dev`
 The terminal will output a url on localhost
 
 Notes:
 
--   I'm running on Node v16.X
+-   I'm running on Node v16.17.0, I've set the Node engine to only allow 16.x
 -   Jest test is incomplete, but I thought it beneficial to include the wip
 -   gql dir is a generated directory
 -   I reached out to the creator of https://icanhazdadjoke.com/ to fix the graphql endpoint- it didn't get me all the way there but challenge accepted, I had to rely on the REST endpoint for the search capability, but that wasn't before reaching out to Brett to fix the endpoint by adding the ability to query a joke by ID which was cool- and overnight. He said he'll work to get a new endpoint up to search jokes and return multiple results- which you can't with graphql- only one at a time.

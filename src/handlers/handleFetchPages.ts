@@ -17,16 +17,25 @@ interface SearchResponse {
     status: number
 }
 
+interface SearchError extends SearchResponse {
+    error: string
+}
+
 const handleFetchPages = async (
     searchTerm: string,
     page: number
 ): Promise<SearchResponse> => {
-    const response = await fetchRequest(
-        `https://icanhazdadjoke.com/search?term=${searchTerm}&page=${page}`,
-        { method: 'GET', headers: { Accept: 'application/json' } }
-    )
-    const data = await response.json()
-    return data
+    try {
+        const response = await fetchRequest(
+            `https://icanhazdadjoke.com/search?term=${searchTerm}&page=${page}`,
+            { method: 'GET', headers: { Accept: 'application/json' } }
+        )
+        const data = await response.json()
+        return data
+    } catch (error) {
+        console.error('FETCH_PAGES_ERROR', error)
+        return { status: 500, error } as SearchError
+    }
 }
 
 export default handleFetchPages

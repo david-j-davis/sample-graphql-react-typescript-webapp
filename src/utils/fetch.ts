@@ -19,6 +19,7 @@ export const fetchRequest = async (
     const response = await fetch(url, fetchOptions)
 
     if (!response.ok) {
+        console.error('FETCH_ERROR', response)
         throw new Error(`Request failed with status ${response.status}`)
     }
 

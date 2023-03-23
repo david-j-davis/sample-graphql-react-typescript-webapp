@@ -15,7 +15,7 @@ const HomePage = () => {
 
     if (fetching) return <NavBar isLoading={true} />
 
-    const { joke, id } = (data?.joke as Joke) || ''
+    const { joke = '', id } = (data?.joke as Joke) || ''
 
     return (
         <>

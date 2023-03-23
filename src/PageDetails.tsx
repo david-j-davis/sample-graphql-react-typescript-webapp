@@ -21,7 +21,7 @@ const DetailsPage = () => {
 
     if (fetching) return <NavBar isLoading={true} />
 
-    const { joke } = (data?.joke as Joke) || ''
+    const { joke = '' } = (data?.joke as Joke)
 
     return (
         <>

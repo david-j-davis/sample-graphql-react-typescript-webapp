@@ -38,8 +38,8 @@ const handleSearchTerm = async (
         )
         const data = await response.json()
 
-        if (data.total_jokes > limit) {
-            const pages = data?.total_pages || 1
+        if (data?.total_jokes > limit) {
+            const pages = data.total_pages || 1
             for (let i = 2; i <= pages; i++) {
                 const pageData = await handleFetchPages(searchTerm, i)
                 data.results = data.results.concat(pageData.results)

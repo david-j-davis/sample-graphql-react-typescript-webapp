@@ -1,8 +1,7 @@
 {
-    "name": "interview-project-web_David-Davis",
+    "name": "david-j-davis-code-sample-graphql-typescript-react-app",
     "version": "1.0.0",
     "main": "index.js",
-    "repository": "git@github.com:onX-Hiring/interview-project-web_David-Davis.git",
     "author": "David Davis <davidjamesdavis.djd@gmail.com>",
     "license": "MIT",
     "scripts": {
